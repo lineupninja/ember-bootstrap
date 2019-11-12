@@ -92,6 +92,15 @@ module.exports = function() {
         {
           name: 'node-tests',
           command: 'yarn run nodetest'
+        },
+        {
+          name: 'embroider-tests',
+          npm: {
+            devDependencies: {
+              '@embroider/webpack': '*',
+              '@embroider/compat': '*'
+            }
+          }
         }
       ]
     };
