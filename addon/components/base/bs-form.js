@@ -425,8 +425,11 @@ export default Component.extend({
 
   keyPress(e) {
     let code = e.keyCode || e.which;
-    if (code === 13 && this.get('submitOnEnter')) {
-      this.triggerSubmit();
+    if (code === 13) {
+      e.preventDefault();
+      if (this.get('submitOnEnter')) {
+        this.triggerSubmit();
+      }
     }
   },
 
